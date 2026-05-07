@@ -1,57 +1,31 @@
 # i2i Systems SQL Case Study 🚀
 
-Bu proje, bir telekomünikasyon veritabanı şeması üzerinde gerçekleştirilen veri analizi ve SQL sorgulama çalışmalarını içermektedir. i2i Systems staj programı kapsamında hazırlanmıştır.
-![Database Schema](./database_schema.png)
+Bu proje, i2i Systems staj başvuru süreci kapsamında hazırlanmış olup, bir telekomünikasyon veritabanı şeması üzerinde gerçekleştirilen veri analizi ve SQL sorgulama görevlerini içermektedir.
 
 ## 🛠 Kullanılan Teknolojiler
-* **Database:** Oracle Database Express Edition (Oracle XE)
-* **Environment:** Docker
-* **Tool:** DBeaver
-* **Language:** SQL (PL/SQL)
+* **Veritabanı:** Oracle Database Express Edition (Oracle XE)
+* **Altyapı:** Docker & Docker Compose
+* **Veritabanı İstemcisi:** DBeaver
+* **Dil:** SQL (PL/SQL)
 
-## 📊 Proje Yapısı
-* `setup.sql`: Veritabanı tablolarının (Tariffs, Customers, Monthly_Stats) oluşturulması ve Foreign Key bağlantıları.
-* `solutions.sql`: Proje kapsamında istenen 6 ana analiz sorgusu ve açıklamaları.
-* `/data`: Analizde kullanılan ham veri setleri (CSV).
+## 📊 Veritabanı Şeması (ER Diyagramı)
+![Database Schema](./database_schema.png)
 
-## 🧠 Öğrenilen Kazanımlar
-* Oracle veritabanı üzerinde karmaşık tablo ilişkileri kurma.
-* `JOIN`, `GROUP BY` ve `AVG/COUNT` gibi fonksiyonlarla büyük veri setlerinden anlamlı raporlar çıkarma.
-* Docker üzerinde veritabanı yönetimi ve DBeaver ile SQL geliştirme.
+## 📂 Proje Yapısı (Dosyalar)
+* `docker-compose.yml`: Oracle XE veritabanı ortamını Docker üzerinde ayağa kaldırır.
+* `/init-scripts/TABLE_CREATION_SCRIPTS.sql`: Tablo oluşturma ve Foreign Key kısıtlamalarını içeren DDL komutlarıdır. Konteyner başlatıldığında otomatik olarak çalışacak şekilde ayarlanmıştır.
+* `SOLUTIONS.sql`: İstenen 6 fonksiyonel gereksinimin SQL sorgularını ve her bir yaklaşımın detaylı açıklamalarını içerir.
+* `/data`: Projede kullanılan ham CSV veri setlerini (`CUSTOMERS.csv`, `TARIFFS.csv`, `MONTHLY_STATS.csv`) barındırır.
 
----
-**Prepared by:** Onur Zorlu - *Final Year Computer Programming Student*
+## 🚀 Proje Nasıl Çalıştırılır (Bonus Görev Dahil)
+Bu proje, sistemin eksiksiz olarak tek tuşla ayağa kaldırılabilmesi ve **Otomatik Veritabanı Kurulumu (Automated Seeding)** için bir `docker-compose.yml` dosyası içerir.
 
+### Ön Koşullar
+* Bilgisayarınızda Docker ve Docker Compose yüklü olmalıdır.
 
-
-
-
-
-
-
-## 🚀 Bonus Task: Docker Compose ile Veritabanı Kurulumu
-
-Bu projede, veritabanı ortamının herkes tarafından kolayca ve aynı standartlarda kurulabilmesi için **Docker Compose** kullanılmıştır. Olası port çakışmalarını önlemek adına dış port `1522` olarak yapılandırılmıştır.
-
-### Adım 1: Veritabanını Başlatma
-Proje dizininde komut satırını (CMD/PowerShell veya Bash) açarak aşağıdaki komutu çalıştırın:
-```shell
-docker-compose up -d
-```
-<img width="960" height="298" alt="terminal" src="https://github.com/user-attachments/assets/d7173cd6-0eba-490c-9488-4e965caea1a0" />
-Veritabanı hazır hale geldikten sonra DBeaver (veya tercih ettiğiniz bir SQL istemcisi) üzerinden aşağıdaki yapılandırma ile bağlantı sağlayabilirsiniz:
-
-Host: localhost
-
-Port: 1522
-
-Database: XE
-
-Username: system
-
-Password: i2iPassword123
-
-Bağlantı testi başarılı olduğunda sistem aşağıdaki gibi yanıt verecektir:
-<img width="957" height="1075" alt="ss6" src="https://github.com/user-attachments/assets/459cf847-590d-4bd5-8b30-6bd1be4b3b13" />
-
-
+### Adım Adım Çalıştırma
+1. Bu repoyu bilgisayarınıza klonlayın.
+2. Terminalinizi açın ve proje dizinine gidin.
+3. Oracle XE veritabanını başlatmak için aşağıdaki komutu çalıştırın:
+   ```bash
+   docker-compose up -d
