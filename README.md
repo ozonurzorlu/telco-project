@@ -29,3 +29,10 @@ Bu proje, sistemin eksiksiz olarak tek tuşla ayağa kaldırılabilmesi ve **Oto
 3. Oracle XE veritabanını başlatmak için aşağıdaki komutu çalıştırın:
    ```bash
    docker-compose up -d
+4. Otomatik Kurulum (Automated Seeding): /init-scripts klasöründeki TABLE_CREATION_SCRIPTS.sql dosyası, konteyner başlatılırken otomatik olarak çalışacaktır. Tabloları manuel olarak kurmanıza gerek yoktur!
+
+5. DBeaver'ı açın ve localhost:1521 adresine bağlanın (Kullanıcı Adı: system, Şifre: oracle).
+
+6. /data klasöründeki CSV dosyalarını DBeaver'ın içe aktarma (import) aracını kullanarak ilgili tablolara aktarın.
+
+7. Analizleri ve sonuçları görmek için SOLUTIONS.sql içindeki sorguları çalıştırın.
