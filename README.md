@@ -8,4 +8,19 @@ Proje dizininde komut satırını (CMD/PowerShell veya Bash) açarak aşağıdak
 docker-compose up -d
 ```
 <img width="960" height="298" alt="terminal" src="https://github.com/user-attachments/assets/d7173cd6-0eba-490c-9488-4e965caea1a0" />
+Veritabanı hazır hale geldikten sonra DBeaver (veya tercih ettiğiniz bir SQL istemcisi) üzerinden aşağıdaki yapılandırma ile bağlantı sağlayabilirsiniz:
+
+Host: localhost
+
+Port: 1522
+
+Database: XE
+
+Username: system
+
+Password: i2iPassword123
+
+Bağlantı testi başarılı olduğunda sistem aşağıdaki gibi yanıt verecektir:
+<img width="957" height="1075" alt="ss6" src="https://github.com/user-attachments/assets/459cf847-590d-4bd5-8b30-6bd1be4b3b13" />
+
 
