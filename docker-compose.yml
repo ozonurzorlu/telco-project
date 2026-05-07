@@ -1,15 +1,11 @@
-version: '3.8'
-
 services:
   oracle-db:
     image: gvenzl/oracle-xe:21-slim-faststart
     container_name: i2i_oracle_xe
     environment:
-      - ORACLE_PASSWORD=i2iPassword123  # Buraya güçlü bir şifre belirleyebilirsin
-      - APP_USER=I2I_USER               # Opsiyonel: Otomatik kullanıcı oluşturma
-      - APP_USER_PASSWORD=i2iUser123    # Opsiyonel: Kullanıcı şifresi
+      - ORACLE_PASSWORD=i2iPassword123
     ports:
-      - "1521:1521"
+      - "1522:1521"
     volumes:
       - oracle-data:/opt/oracle/oradata
 
