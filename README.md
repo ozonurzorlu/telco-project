@@ -1,6 +1,7 @@
 # i2i Systems SQL Case Study 🚀
 
 Bu proje, bir telekomünikasyon veritabanı şeması üzerinde gerçekleştirilen veri analizi ve SQL sorgulama çalışmalarını içermektedir. i2i Systems staj programı kapsamında hazırlanmıştır.
+![Database Schema](./database_schema.png)
 
 ## 🛠 Kullanılan Teknolojiler
 * **Database:** Oracle Database Express Edition (Oracle XE)
