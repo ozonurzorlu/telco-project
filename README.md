@@ -18,7 +18,7 @@ Bu proje, i2i Systems staj başvuru süreci kapsamında hazırlanmış olup, bir
 * `/data`: Projede kullanılan ham CSV veri setlerini (`CUSTOMERS.csv`, `TARIFFS.csv`, `MONTHLY_STATS.csv`) barındırır.
 
 ##  Proje Nasıl Çalıştırılır 
-Bu proje, sistemin eksiksiz olarak tek tuşla ayağa kaldırılabilmesi ve **Otomatik Veritabanı Kurulumu (Automated Seeding)** için bir `docker-compose.yml` dosyası içerir.
+Bu proje, sistemin eksiksiz olarak tek tuşla ayağa kaldırılabilmesi ve **Otomatik Veritabanı Kurulumu için bir `docker-compose.yml` dosyası içerir.
 
 ### Ön Koşullar
 * Bilgisayarınızda Docker ve Docker Compose yüklü olmalıdır.
@@ -29,7 +29,7 @@ Bu proje, sistemin eksiksiz olarak tek tuşla ayağa kaldırılabilmesi ve **Oto
 3. Oracle XE veritabanını başlatmak için aşağıdaki komutu çalıştırın:
    ```bash
    docker-compose up -d
-4. Otomatik Kurulum: /init-scripts klasöründeki TABLE_CREATION_SCRIPTS.sql dosyası, konteyner başlatılırken otomatik olarak çalışacaktır. Tabloları manuel olarak kurmanıza gerek yoktur!
+4. Otomatik Kurulum: /init-scripts klasöründeki TABLE_CREATION_SCRIPTS.sql dosyası, konteyner başlatılırken otomatik olarak çalışacaktır. Tabloları manuel olarak kurmanıza gerek yoktur.
 
 5. DBeaver'ı açın ve localhost:1521 adresine bağlanın (Kullanıcı Adı: system, Şifre: oracle).
 
