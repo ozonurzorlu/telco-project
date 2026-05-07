@@ -1,4 +1,4 @@
-# i2i Systems SQL Case Study 🚀
+# i2i Systems SQL Case Study 
 
 Bu proje, i2i Systems staj başvuru süreci kapsamında hazırlanmış olup, bir telekomünikasyon veritabanı şeması üzerinde gerçekleştirilen veri analizi ve SQL sorgulama görevlerini içermektedir.
 
@@ -17,7 +17,7 @@ Bu proje, i2i Systems staj başvuru süreci kapsamında hazırlanmış olup, bir
 * `SOLUTIONS.sql`: İstenen 6 fonksiyonel gereksinimin SQL sorgularını ve her bir yaklaşımın detaylı açıklamalarını içerir.
 * `/data`: Projede kullanılan ham CSV veri setlerini (`CUSTOMERS.csv`, `TARIFFS.csv`, `MONTHLY_STATS.csv`) barındırır.
 
-## 🚀 Proje Nasıl Çalıştırılır (Bonus Görev Dahil)
+##  Proje Nasıl Çalıştırılır 
 Bu proje, sistemin eksiksiz olarak tek tuşla ayağa kaldırılabilmesi ve **Otomatik Veritabanı Kurulumu (Automated Seeding)** için bir `docker-compose.yml` dosyası içerir.
 
 ### Ön Koşullar
