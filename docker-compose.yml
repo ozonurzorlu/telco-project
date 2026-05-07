@@ -1,13 +1,11 @@
 services:
   oracle-db:
-    image: gvenzl/oracle-xe:21-slim-faststart
-    container_name: i2i_oracle_xe
+    image: gvenzl/oracle-xe:slim
+    container_name: i2i_oracle_db
     environment:
-      - ORACLE_PASSWORD=i2iPassword123
+      - ORACLE_PASSWORD=oracle
     ports:
-      - "1522:1521"
+      - "1521:1521"
     volumes:
-      - oracle-data:/opt/oracle/oradata
-
-volumes:
-  oracle-data:
+      - ./init-scripts:/container-entrypoint-initdb.d/
+    restart: unless-stopped
